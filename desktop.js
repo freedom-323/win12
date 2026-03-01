@@ -2252,7 +2252,7 @@ defaultIcons.forEach(item => {
         const appId = $this.attr('data-id');
 
         // 移动端适配
-        if (isMobileDevice() || isIpad() || hasCoarsePointerAvailable()){
+        if (isMobileDevice() || isIpad() || isTouchDevice()){
             $this.on('click', () => {
                 if (appId === 'feedback') shownotice('feedback');
                 else openapp(appId);
@@ -2544,8 +2544,11 @@ function isMobileDevice() {
     return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-function hasCoarsePointerAvailable() {
-  return window.matchMedia("(any-pointer: coarse)").matches;
+function isTouchDevice() {
+  return (
+	window.matchMedia("(pointer: coarse)").matches ||
+    window.matchMedia("(any-pointer: coarse)").matches ||
+    'ontouchstart' in window);
 }
 
 function checkOrientation() {

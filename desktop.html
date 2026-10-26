@@ -960,6 +960,18 @@ toggletheme() 切换主题
               hide_startmenu();
             "
           >
+          <a
+            oncontextmenu="
+              return showcm(event, 'smlapp', ['solitaire', '纸牌']);
+            "
+            onclick="
+              openapp('solitaire');
+              hide_startmenu();
+            "
+          >
+            <img src="icon/solitaire.png" />
+            <p>纸牌</p>
+          </a> 
             <img src="icon/macos.svg" />
             <p>MacOS</p>
           </a>

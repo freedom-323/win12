@@ -1098,7 +1098,7 @@ let apps = {
     'https://win12-online.github.io/win12/games/minesweeper.html',
   ),
   macos: createWebapp('macos', 'https://macos-web.app/'),
-  solitaire: createWebapp('solitaire', 'https://freedom-323.github.io/solitaire/standalone.html')
+  solitaire: createWebapp('solitaire', 'https://freedom-323.github.io/solitaire/standalone.html'),
   defender: {
     init: () => {
       return null;

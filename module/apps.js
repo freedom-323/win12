@@ -1079,7 +1079,7 @@ let apps = {
   },
   // webapp 即将网页嵌套作为应用内容，格式参考 desktop.html 中 vscode, bilibili
   webapps: {
-    apps: ['vscode', 'bilibili', 'copilot', 'minesweeper', 'solitaire],
+    apps: ['vscode', 'bilibili', 'copilot', 'minesweeper', 'solitaire'],
     init: () => {
       for (const app of apps.webapps.apps) {
         if (!apps[app].loaded) apps[app].load();

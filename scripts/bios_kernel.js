@@ -210,7 +210,12 @@ window.onkeydown = (evt) => {
     }
   } else {
     // Confirm dialog navigation
-    if (event.key === 'ArrowRight' || event.key === 'Right' || event.key === 'ArrowLeft' || event.key === 'Left') {
+    if (
+      event.key === 'ArrowRight' ||
+      event.key === 'Right' ||
+      event.key === 'ArrowLeft' ||
+      event.key === 'Left'
+    ) {
       // Right/Left
       event.preventDefault();
       btn = btn ? 0 : 1;
